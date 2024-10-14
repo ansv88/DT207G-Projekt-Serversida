@@ -3,7 +3,7 @@ Det här repot innehåller kod för ett REST API byggt med Express. APIet är by
 
 ## Länk
 En liveversion av APIet finns tillgänglig på följande URL:
-[....]
+[https://dt207g-projekt-serversida.onrender.com]
 
 ## Installation, databas
 APIet använder en MongoDB-databas. Alla id:n för objekten automatgenereras av MongoDB.
