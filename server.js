@@ -1,5 +1,4 @@
 const express = require('express');
-// const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const authRoutes = require('./routes/authRoutes');
@@ -10,9 +9,17 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-// app.use(bodyParser.json());
+// CORS-alternativ
+const corsOptions = {
+  origin: 'https://dt207g-projekt-klientsida.onrender.com',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
+
+//Använd CORS-middleware med specifika alternativ
+app.use(cors(corsOptions));
+
 app.use(express.json());
-app.use(cors());
 
 //Anslut till databasen
 mongoose
